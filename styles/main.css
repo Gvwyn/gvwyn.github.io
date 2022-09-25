@@ -1,32 +1,34 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #000;
-    color: #FFF;
+    margin: 24px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #222;
+    color: goldenrod;
 }
 
-h1 {
-    font-size: 4rem;
-}
-
-h2 {
-    font-size: 3.5rem;
-}
-
-.navigation {
-    text-align: center;
+.navbar {
     font-size: 2rem;
 }
 
-a:link, a:visited, a:active {
+.bottom-navbar {
+    position: fixed;
+    bottom: 12px;
+}
+
+a:active, a:visited, a:link {
     text-decoration: none;
-    color: orange;
+    color: goldenrod;
 }
 
 a:hover {
-    color: #FFF;
-    background-color: #666;
-
+    background-color: blanchedalmond;
 }
-.faded {
-    color: #666;
+
+.container {
+    max-width: 660px;
+    margin: auto;
 }
