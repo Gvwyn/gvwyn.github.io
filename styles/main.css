@@ -8,6 +8,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #222;
     color: goldenrod;
+    font-size: 18px;
 }
 
 .navbar {
@@ -18,6 +19,19 @@ body {
     position: fixed;
     bottom: 12px;
 }
+
+.pc-navbar {
+    display: block;
+}
+
+.mobile-navbar {
+    display: none;
+}
+
+.current-page {
+    background-color: #444;
+    text-decoration: underline;
+}  
 
 a:active, a:visited, a:link {
     text-decoration: none;
@@ -32,3 +46,10 @@ a:hover {
     max-width: 660px;
     margin: auto;
 }
+
+@media screen and (max-width: 550px) {
+    .mobile-navbar { display: block; }
+    .pc-navbar { display: none; }
+    body { font-size: 16px; }
+}
+
