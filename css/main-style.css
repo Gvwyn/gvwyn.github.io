@@ -1,0 +1,193 @@
+body {
+    font-family: 'Rubik Mono One', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    background-color: #000;
+    background: linear-gradient(to right, #09162b, #000, #09162b);
+    color: #FFF;
+}
+
+/* light mode changes now have their own css file */
+
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+    cursor: default;
+}
+
+/* desktop navbar */
+nav {
+    padding: 10px 0;
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+}
+
+nav img {
+    width: 32px;
+    height: auto;
+    cursor: pointer;
+    transition: .3s;
+}
+
+nav img:hover {
+    transform: scale(1.2);
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 2em;
+    margin: 0 35px;
+}
+
+.socials {
+    margin: 0 5px;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    padding-bottom: 5px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+/* hamburger */
+.responsibilities {
+    margin-top: 0;
+    display: none;
+    text-align: right;
+}
+
+#hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    font-size: 14px;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgba(51, 51, 51, 0.25);
+    backdrop-filter: blur(5px);
+    z-index: 3;
+}
+
+p#ham {
+    position: absolute;
+    margin: 0 2px 8px 2px;
+    bottom: 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+a#ham {
+    font-size: 12px;
+    margin: 0;
+}
+
+.ham-link {
+    display: block;
+}
+
+@media only screen and (max-width: 1100px) {
+    nav, footer {
+        display: none;
+    }
+
+    .responsibilities {
+        display: block;
+    }
+}
+
+/* main screen */
+.main-content {
+    text-align: center;
+}
+
+h1 {
+    font-family: Pacifico, cursive;
+    font-size: 64px;
+    margin-bottom: 0;
+}
+
+.main-paragraph {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+}
+
+
+/* footer, copyright stuff so i dont get sued all of a sudden */
+footer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.small-icons {
+    width: 14px;
+}
+
+/* theme switch */
+.toggle-button {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    cursor: pointer;
+    transition: transform .7s ease;
+}
+
+.toggle-button:hover {
+    transform: scale(1.2);
+}
+
+/* silly snow effect that took way too long */
+.snow {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    top: 0;
+    background-color: white;
+    animation: Snowing 1s linear infinite;
+}
+
+@keyframes Snowing {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}

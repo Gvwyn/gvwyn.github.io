@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main-style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <img style="margin-right: 35px;" src="images/icon.png" alt="B">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="#" class="nav-link">Posts<img src="images/expand.svg"></a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="https://github.com" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+        <a href="https://stackoverflow.com" target="_blank"><img src="images/stack.png" alt="Stack Overflow"></a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+    </div>
+
+    <div class="toggle-button" onclick="toggleBackground()">
+        <img id="toggle-icon" src="images/night.svg" alt="Night Mode Toggle" width="32px">
+    </div>
+
+    <footer>
+        <p>&copy; Gvwyn 2023. All rights reserved. Icons provided by
+            <a href="https://iconfinder.com" target="_blank"> IconFinder</a>
+            <img class="small-icons" src="images/open_new.svg"></img>
+            and
+            <a href="https://fonts.google.com/icons" target="_blank">Google Fonts</a>
+            <img class="small-icons" src="images/open_new.svg"></p>
+    </footer>
+
+    <!-- javascript -->
+    <script src="js/stars-bg.js"></script>
+    <script src="js/light.js"></script>
+
+</body>
+</html>
