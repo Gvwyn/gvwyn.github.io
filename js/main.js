@@ -9,7 +9,7 @@ function DisplaySnow() {
     for (let i = 0; i < 50; i++) {
         const star = document.createElement("div");
         star.className = "snow";
-        star.style.left = Math.random() * window.innerWidth*1.5 + "px";
+        star.style.left = Math.random() * window.innerWidth + "px";
         star.style.animationDuration = (Math.random() * 2 + 1) + "s";
         starContainer.appendChild(star);
     }
@@ -25,13 +25,13 @@ function toggleBackground() {
         document.body.classList.remove('light');
         logo.src = 'images/icon.png';
         expand.src = 'images/expand.svg';
-        document.documentElement.style.setProperty('--line', '#FFF');
+        document.documentElement.style.setProperty('--fontclr', '#FFF');
         toggleIcon.src = 'images/night.svg';
     } else {
         document.body.classList.add('light');
         logo.src = 'images/light/icon.png';
         expand.src = 'images/light/expand.svg';
-        document.documentElement.style.setProperty('--line', '#EBF3E8');
+        document.documentElement.style.setProperty('--fontclr', '#EBF3E8');
         toggleIcon.src = 'images/sun.svg';
     }
 }

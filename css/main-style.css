@@ -1,7 +1,9 @@
 :root {
-    --line: #FFF; /* this is a really bad workaround, but my patience is wearing thin i cant take this anymore */
+    --fontclr: #FFF; /* this is a really bad workaround, but my patience is wearing thin i cant take this anymore */
 }
-
+html {
+    width: 100%;
+}
 body {
     font-family: 'Rubik Mono One', monospace;
     margin: 0;
@@ -34,7 +36,7 @@ nav img {
     width: 32px;
     height: auto;
     cursor: pointer;
-    transition: .3s;
+    transition: .3s ease-in-out;
 }
 
 nav img:hover {
@@ -80,7 +82,7 @@ nav a {
 }
 
 .nav-link-current {
-    background-color: var(--line);
+    background-color: var(--fontclr);
     color: black !important;
 }
 
@@ -91,8 +93,12 @@ nav a {
     height: 5px;
     bottom: 0;
     left: 0;
-    background-color: var(--line); /* i hate css and js */
+    background-color: var(--fontclr); /* i hate css and js */
     transition: width 0.3s ease;
+}
+
+.nav-link-current::before {
+    background-color: #000;
 }
 
 .nav-link:hover::before, .nav-link-current:hover::before {
@@ -133,9 +139,14 @@ a#ham {
     cursor: pointer;
 }
 
+.ham-link:hover, .ham-link-current:hover {
+    transform: translateX(-10px);
+}
+
 .ham-link, .ham-link-current {
     display: block;
     cursor: pointer;
+    transition: .5s ease-in-out;
 }
 
 .ham-link-current {
@@ -176,7 +187,7 @@ h1 {
 
 .tile {
     padding: 10px;
-    border: 1px solid var(--line);
+    border: 1px solid var(--fontclr);
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
@@ -236,6 +247,6 @@ footer a:hover {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(100vh) translateX(-15vh);
+        transform: translateY(100vh);
     }
 }
