@@ -3,47 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Gvwyn</title>
     <link rel="stylesheet" href="css/main-style.css">
-    
-    <!-- Fonts -->
+    <link rel="stylesheet" href="css/light-mode.css">
+    <link rel="icon" href="images/icon.png">
+
+    <!-- font imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></head>
-<body>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pacifico&family=Rubik+Mono+One&display=swap" rel="stylesheet"><body>
 
-    <!-- Navbar -->
+    <!-- hamburger -->
+    <nav class="responsibilities">
+        <a onclick="HamburgerON()"><img src="images/hamburger.svg"></a>
+        <div id="hamburger">
+            <a onclick="HamburgerOFF()"><img style="margin-top: 10px;" src="images/close.svg"></a>
+            <a href="about.html" class="ham-link">About</a>
+            <a href="#" class="ham-link">All posts</a>
+            <a href="project.html" class="ham-link">Projects</a>
+            <a href="contact.html" class="ham-link">Contact</a>
+
+            <p id="ham">&copy; Gvwyn 2023. All rights reserved. Icons from
+                <a id="ham" href="https://iconfinder.com" target="_blank"> IconFinder</a> and
+                <a id="ham" href="https://fonts.google.com/icons" target="_blank">Google Fonts</a>
+            </p>
+        </div>
+    </nav>
+    
+    <!-- desktop navbar -->
     <nav>
-        <img style="margin-right: 35px;" src="images/icon.png" alt="B">
+        <img id="logo" src="images/icon.png" alt="B">
         <a href="about.html" class="nav-link">About</a>
-        <a href="#" class="nav-link">Posts<img src="images/expand.svg"></a>
-        <a href="portfolio.html" class="nav-link">Portfolio</a>
+
+        <div class="dropdown">
+            <a href="#" class="nav-link">Posts<img id="expand" src="images/expand.svg"></a>
+            <div class="dropdownmenu">
+                <p><a href="#" class="nav-link">Newest posts</a></p>
+                <p><a href="#" class="nav-link">All posts</a></p>
+            </div>
+        </div>
+        
+        <a href="project.html" class="nav-link">Projects</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="https://github.com" target="_blank"><img src="images/github.png" alt="GitHub"></a>
-        <a href="https://stackoverflow.com" target="_blank"><img src="images/stack.png" alt="Stack Overflow"></a>
+        <a class="socials" href="https://github.com/Gvwyn" target="_blank">
+            <img id="github" src="images/github.svg" alt="My GitHub"></a>
+        <a class="socials" href="#" target="_blank">
+            <img id="linkedin" src="images/linkedin.svg" alt="My LinkedIn"></a>
     </nav>
 
-    <!-- Main Content -->
+    <!-- main content -->
     <div class="main-content">
-
+        <h1>Hey there, sport</h1>
     </div>
 
     <div class="toggle-button" onclick="toggleBackground()">
-        <img id="toggle-icon" src="images/night.svg" alt="Night Mode Toggle" width="32px">
+        <img id="toggle-icon" src="images/night.svg" alt="Night Mode Toggle" width="52px">
     </div>
 
     <footer>
-        <p>&copy; Gvwyn 2023. All rights reserved. Icons provided by
-            <a href="https://iconfinder.com" target="_blank"> IconFinder</a>
-            <img class="small-icons" src="images/open_new.svg"></img>
+        <p>&copy; Gvwyn 2023. All rights reserved. Icons from
+            <a href="https://iconfinder.com" target="_blank"> IconFinder</a><img class="small-icons" src="images/open_new.svg"></img>
             and
-            <a href="https://fonts.google.com/icons" target="_blank">Google Fonts</a>
-            <img class="small-icons" src="images/open_new.svg"></p>
+            <a href="https://fonts.google.com/icons" target="_blank">Google Fonts</a><img class="small-icons" src="images/open_new.svg"></p>
     </footer>
 
     <!-- javascript -->
-    <script src="js/stars-bg.js"></script>
-    <script src="js/light.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>

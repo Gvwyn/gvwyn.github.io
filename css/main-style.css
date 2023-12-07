@@ -1,3 +1,7 @@
+:root {
+    --line: #FFF; /* this is a really bad workaround, but my patience is wearing thin i cant take this anymore */
+}
+
 body {
     font-family: 'Rubik Mono One', monospace;
     margin: 0;
@@ -43,33 +47,55 @@ nav a {
     margin: 0 35px;
 }
 
+.dropdown {
+    display: inline-block;
+    margin: 2px;
+}
+
+.dropdownmenu {
+    display: none;
+    background-color: rgba(51, 51, 51, 0.25);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdownmenu {
+    display: block;
+}
+
 .socials {
     margin: 0 5px;
 }
 
-.nav-link {
+.nav-link, .nav-link-current {
     position: relative;
     display: inline-block;
     margin: 0 15px;
-    padding-bottom: 5px;
     color: white;
     cursor: pointer;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.nav-link::before {
+.nav-link-current {
+    background-color: var(--line);
+    color: black !important;
+}
+
+.nav-link::before, .nav-link-current::before {
     content: '';
     position: absolute;
     width: 0;
     height: 5px;
     bottom: 0;
     left: 0;
-    background-color: #FFF;
+    background-color: var(--line); /* i hate css and js */
     transition: width 0.3s ease;
 }
 
-.nav-link:hover::before {
+.nav-link:hover::before, .nav-link-current:hover::before {
     width: 100%;
 }
 
@@ -95,7 +121,7 @@ nav a {
 
 p#ham {
     position: absolute;
-    margin: 0 2px 8px 2px;
+    margin: 0 24px 8px 24px !important;
     bottom: 0;
     text-align: center;
     font-size: 12px;
@@ -104,10 +130,16 @@ p#ham {
 a#ham {
     font-size: 12px;
     margin: 0;
+    cursor: pointer;
 }
 
-.ham-link {
+.ham-link, .ham-link-current {
     display: block;
+    cursor: pointer;
+}
+
+.ham-link-current {
+    color: royalblue !important;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -136,6 +168,19 @@ h1 {
     font-size: 32px;
 }
 
+.tiles {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    margin: 20px;
+}
+
+.tile {
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
 
 /* footer, copyright stuff so i dont get sued all of a sudden */
 footer {
@@ -155,6 +200,9 @@ footer a {
     cursor: pointer;
 }
 
+footer a:hover {
+    text-decoration: underline;
+}
 
 .small-icons {
     width: 14px;
@@ -166,7 +214,7 @@ footer a {
     bottom: 10px;
     left: 10px;
     cursor: pointer;
-    transition: transform .7s ease;
+    transition: transform 1s ease;
 }
 
 .toggle-button:hover {
@@ -180,14 +228,14 @@ footer a {
     height: 2px;
     top: 0;
     background-color: white;
-    animation: Snowing 1s linear infinite;
+    animation: Snowfall 1s linear infinite;
 }
 
-@keyframes Snowing {
+@keyframes Snowfall {
     0% {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(100vh);
+        transform: translateY(100vh) translateX(-15vh);
     }
 }
